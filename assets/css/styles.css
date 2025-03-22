@@ -1,0 +1,269 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+/* ============ Common ============= */
+.main-content {
+  width: 1170px;
+  max-width: calc(100% - 48px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 118px;
+  line-height: 50px;
+  border-radius: 999px;
+  background: #ffb900;
+  color: #fff;
+  text-align: center;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 2);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ============ Header ============= */
+.header {
+  background: #fffcf4;
+}
+
+.header.fixed {
+  position: sticky;
+  top: -28px;
+  flex-shrink: 1;
+}
+
+.header .body {
+  display: flex;
+  align-items: center;
+  padding: 36px 0 8px;
+}
+
+.header .nav {
+  margin-left: auto;
+}
+
+.header .nav ul {
+  display: flex;
+}
+
+.header .nav a {
+  padding: 8px 21px;
+  color: #5f5b53;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
+}
+
+.header .nav a:hover,
+.header .nav li.active a {
+  position: relative;
+  color: #171100;
+  text-shadow: 1px 1px 0 currentColor;
+}
+
+.nav li.active a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  border-radius: 8px;
+  bottom: 8px;
+  left: 21px;
+  background: #171100;
+}
+
+.header .action {
+  margin-left: 70px;
+}
+
+.header .btn {
+  min-width: 144px;
+  background: #171100;
+  font-size: 1.6rem;
+}
+
+/* Hero */
+.hero {
+  background: #fffcf4;
+  padding: 56px 0 65px;
+}
+
+.hero .body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero .image-block {
+  position: relative;
+}
+
+.hero .image-block .image {
+  width: 470px;
+  height: 685px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.image-block .courses-info {
+  position: absolute;
+  bottom: 48px;
+  left: 300px;
+  width: 270px;
+  height: 244px;
+  flex-shrink: 0;
+  padding: 24px 36px 0 24px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.courses-info .row {
+  display: flex;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.courses-info .row:first-child {
+  margin-top: 0;
+}
+
+.courses-info .info-detail {
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0px;
+}
+
+.courses-info .info-detail p {
+  color: #5f5b53;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.courses-info .info-detail .label {
+  color: #171100;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.hero .text-block {
+  width: 470px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hero .text-block .title {
+  color: #171100;
+  font-family: Sen;
+  font-size: 5.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.17; /* 117.241% */
+  letter-spacing: -1.16px;
+}
+
+.hero .text-block .desc {
+  margin-top: 22px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.67; /* 166.667% */
+}
+
+.hero .text-block .show-up {
+  display: flex;
+  align-items: center;
+  margin-top: 38px;
+}
+
+.text-block .video a {
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+}
+
+.text-block .video img {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  transform: translateY(5px);
+}
+
+.text-block .video span {
+  margin-left: 5px;
+  color: #171100;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.text-block .statistic {
+  margin-top: 48px;
+}
+
+.text-block .statistic .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.67; /* 166.667% */
+}
+
+.text-block .statistic .row {
+  display: flex;
+  margin-top: 8px;
+  gap: 28px;
+}
+
+.text-block .statistic .number {
+  color: #171100;
+  font-family: Sen;
+  font-size: 4.4rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.text-block .statistic .letter {
+  margin-left: 12px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+}

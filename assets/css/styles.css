@@ -4,6 +4,8 @@
 
 html {
   font-size: 62.5%;
+  --primary-color: #ffb900;
+  --heading-font: "Sen", sans-serif;
 }
 
 body {
@@ -24,6 +26,15 @@ body {
   margin-right: auto;
 }
 
+.heading {
+  color: #171100;
+  font-family: Sen, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 1.17; /* 117.241% */
+  letter-spacing: -1.16px;
+}
+
 a {
   text-decoration: none;
 }
@@ -33,7 +44,7 @@ a {
   min-width: 118px;
   line-height: 50px;
   border-radius: 999px;
-  background: #ffb900;
+  background: var(--primary-color);
   color: #fff;
   text-align: center;
   font-size: 1.4rem;
@@ -188,14 +199,9 @@ a {
   margin-bottom: auto;
 }
 
-.hero .text-block .title {
-  color: #171100;
-  font-family: Sen;
+.hero .heading.lv1 {
   font-size: 5.8rem;
-  font-style: normal;
-  font-weight: 700;
   line-height: 1.17; /* 117.241% */
-  letter-spacing: -1.16px;
 }
 
 .hero .text-block .desc {
@@ -266,4 +272,211 @@ a {
   font-size: 1.8rem;
   font-style: normal;
   font-weight: 400;
+}
+
+/* Popular */
+.popular {
+  padding: 65px 0;
+  margin-top: 135px;
+}
+
+.popular-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-info .heading.lv2 {
+  font-size: 3.8rem;
+  line-height: 1.26; /* 126.316% */
+}
+
+.popular-info .desc {
+  --line-clamp: 2;
+  margin-top: 16px;
+  width: 458px;
+  color: #5f5b53;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.67; /* 166.667% */
+}
+
+.popular-top .controls {
+  display: flex;
+  gap: 18px;
+}
+
+.popular-top .control-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid var(--primary-color);
+  background: transparent;
+}
+
+.popular-top .control-btn:hover {
+  background: var(--primary-color);
+}
+
+.popular-top .controls img {
+  width: 20px;
+  height: 20px;
+}
+
+.popular .courses-list {
+  display: flex;
+  margin-top: 55px;
+}
+
+.popular .course-item {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 18px 36px 0px rgba(0, 0, 0, 0.05);
+}
+
+.popular .courses-list .body {
+  padding: 16px 22px 22px;
+}
+
+.courses-list .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular .courses-list .thumb {
+  width: 370px;
+  height: 278px;
+  flex-shrink: 0;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.courses-list .heading.lv2 {
+  font-size: 1.8rem;
+  line-height: 1.67; /* 166.667% */
+}
+
+.courses-list .head .value {
+  color: var(--primary-color);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.courses-list .desc {
+  --line-clamp: 2;
+  width: 326px;
+  color: #5f5b53;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+
+.courses-list .foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 22px;
+}
+
+.courses-list .foot .price {
+  color: #171100;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.67; /* 166.667% */
+}
+
+.courses-list .foot .btn {
+  background: #171100;
+  color: #fff;
+}
+
+.courses-list .foot .btn:hover {
+  background: var(--primary-color);
+}
+
+/* Feedback */
+.feedback {
+  margin-top: 135px;
+  padding: 96px 0;
+  background: #2e2100;
+}
+
+.feedback-list {
+  display: flex;
+  overflow: hidden;
+}
+
+.feedback-item {
+  display: flex;
+  flex-shrink: 0;
+  max-width: 100%;
+}
+
+.feedback-item .avatar {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.feedback-item .info .title {
+  margin-top: 18px;
+  color: #f7f7f7;
+  font-family: var(--heading-font);
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.42; /* 141.667% */
+}
+
+.feedback-item .info .desc {
+  margin-top: 4px;
+  color: #bfbcb2;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.86; /* 185.714% */
+}
+
+.feedback-item .info .dots {
+  margin-top: 28px;
+}
+
+.feedback-item .info .dot {
+  display: inline-block;
+  margin-right: 6px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #634700;
+  cursor: pointer;
+}
+
+.feedback-item .info .dot.active {
+  background: #ffb900;
+  cursor: default;
+}
+
+.feedback-item .content {
+  width: 66%;
+  margin-left: auto;
+}
+
+.feedback-item .content blockquote {
+  margin-left: 30px;
+  color: #fff;
+  font-size: 2.6rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.54; /* 153.846% */
 }
